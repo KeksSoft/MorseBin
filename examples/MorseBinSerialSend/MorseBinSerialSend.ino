@@ -1,4 +1,6 @@
+// Define the pin on which the data is going to be sent
 #define pin 9
+// include the MorseBin library
 #include <MorseBin.h>
 void setup() {
   // Set your Pin as an output
