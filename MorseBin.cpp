@@ -54,20 +54,20 @@ void MBSendByte(String input,int sendpin){
   byte MBStringToNum(String input){
   byte output=0;
   if (input.charAt(7)=='1'){output += 128;}
-    else {output += 0;}
-    if (input.charAt(6)=='1'){output += 64;}
-    else {output += 0;}
-    if (input.charAt(5)=='1'){output += 32;}
-    else {output += 0;}
-    if (input.charAt(4)=='1'){output += 16;}
-    else {output += 0;}
-    if (input.charAt(3)=='1'){output += 8;}
-    else {output += 0;}
-    if (input.charAt(2)=='1'){output += 4;}
-    else {output += 0;}
-    if (input.charAt(1)=='1'){output += 2;}
-    else {output += 0;}
-    if (input.charAt(0)=='1'){output += 1;}
-    else {output += 0;}
+  else {output += 0;}
+  if (input.charAt(6)=='1'){output += 64;}
+  else {output += 0;}
+  if (input.charAt(5)=='1'){output += 32;}
+  else {output += 0;}
+  if (input.charAt(4)=='1'){output += 16;}
+  else {output += 0;}
+  if (input.charAt(3)=='1'){output += 8;}
+  else {output += 0;}
+  if (input.charAt(2)=='1'){output += 4;}
+  else {output += 0;}
+  if (input.charAt(1)=='1'){output += 2;}
+  else {output += 0;}
+  if (input.charAt(0)=='1'){output += 1;}
+  else {output += 0;}
     return output;
   }
