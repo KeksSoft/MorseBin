@@ -1,3 +1,8 @@
+/*
+ © KeksSoft 2020, 
+ Created by RegenJoho
+*/
+
 #ifndef MorseBin_h
 #define MorseBin_h
 #include <Arduino.h>
