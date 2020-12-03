@@ -2,7 +2,7 @@
 #include <MorseBin.h>
 String MBReceive(int respin){
   	String buf;
-  	Int waitTimer =0;
+  	int waitTimer =0;
 	while(digitalRead(respin)==LOW);
 	while(digitalRead(respin) == HIGH){
 		waitTimer++;
