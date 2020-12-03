@@ -9,7 +9,6 @@ String MBReceive(int respin){
 		delay(1);
 	}
  	if(waitTimer>50){
-		delay(1);
 	}
 	else{
 		return "";
