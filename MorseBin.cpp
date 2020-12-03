@@ -86,7 +86,7 @@ void MBSendByte(String input,int sendpin){
   else {output += 0;}
     return output;
   }
-String NumToString(byte input){
+String MBNumToString(byte input){
   String output = "";
   String realoutput = "";
   if(input >= 128){
