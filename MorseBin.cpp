@@ -29,7 +29,7 @@ String MBReceive(int respin){
       		t++;
       		delay(10);
      	 }
-      	if (t > 2) {
+      	if (t > 2 && t < 5) {
         	buf += "0";
         }
         else {
@@ -52,6 +52,9 @@ void MBSend1(int sendpin) {
   }
 void MBSendByte(String input,int sendpin){
     	//Serial.println("gotit");
+	digitalWrite(sendpin,HIGH);
+	delay(60);
+	digitalWrite(sendpin,LOW);
    	 for (int i=0;i<8;i++){
     		if (input.charAt(i)=='1'){
      		 MBSend1(sendpin);
