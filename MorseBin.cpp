@@ -55,6 +55,7 @@ void MBSendByte(String input,int sendpin){
 	digitalWrite(sendpin,HIGH);
 	delay(60);
 	digitalWrite(sendpin,LOW);
+	delay(10);
    	 for (int i=0;i<8;i++){
     		if (input.charAt(i)=='1'){
      		 MBSend1(sendpin);
