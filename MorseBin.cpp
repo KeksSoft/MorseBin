@@ -86,3 +86,55 @@ void MBSendByte(String input,int sendpin){
   else {output += 0;}
     return output;
   }
+String NumToString(byte input){
+  String output = "";
+  String realoutput = "";
+  if(input >= 128){
+    output +="1";
+    input -= 128;
+    }
+    else{output+="0";}
+    
+  if(input >= 64){
+    output +="1";
+    input -= 64;
+    }
+    else{output+="0";} 
+       
+  if(input >= 32){
+    output +="1";
+    input -= 32;
+    }
+    else{output+="0";}  
+      
+  if(input >= 16){
+    output +="1";
+    input -= 16;
+    }
+    else{output+="0";}   
+    
+  if(input >= 8){
+    output +="1";
+    input -= 8;
+    }
+    else{output+="0";}    
+    
+  if(input >= 4){
+    output +="1";
+    input -= 4;
+    }
+    else{output+="0";}    
+    
+  if(input >= 2){
+    output +="1";
+    input -= 2;
+    }
+    else{output+="0";}
+    
+  if(input >= 1){
+    output +="1";
+    input -= 1;
+    }
+    else{output+="0";}
+    return output;
+}
