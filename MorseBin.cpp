@@ -2,12 +2,12 @@
 #include <MorseBin.h>
 String MBReceive(int respin){
   	String buf;
-  	int waitTimer =0;
+  	int waitTimer = 0;
+	int timeouttimer = 0;
 	while(digitalRead(respin)==LOW){
-		timer++;
+		timeouttimer++;
     		delay(1);
-    		if(timer>=10000){
-      		timer = 0;
+    		if(timeouttimer>=10000){
       		return "errTimeout";
 	  	}
 	}
