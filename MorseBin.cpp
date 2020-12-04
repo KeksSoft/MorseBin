@@ -3,7 +3,14 @@
 String MBReceive(int respin){
   	String buf;
   	int waitTimer =0;
-	while(digitalRead(respin)==LOW);
+	while(digitalRead(respin)==LOW){
+		timer++;
+    		delay(1);
+    		if(timer>=10000){
+      		timer = 0;
+      		return "errTimeout";
+	  	}
+	}
 	while(digitalRead(respin) == HIGH){
 		waitTimer++;
 		delay(1);
@@ -11,7 +18,7 @@ String MBReceive(int respin){
  	if(waitTimer>50){
 	}
 	else{
-		return "";
+		return "errTimeout";
 	}
  	for (int i=0;i<8;i++){
  	int timer = 0;
@@ -20,15 +27,15 @@ String MBReceive(int respin){
     		delay(1);
     		if(timer>=10000){
       		timer = 0;
-      		return "";
+      		return "errTimeout";
 	  		}
     	}
     	int t = 0;
     	while(digitalRead(respin)==HIGH) {
       		t++;
-      		delay(10);
+      		delay(1);
      	 }
-      	if (t > 2 && t < 5) {
+      	if (t > 20 && t < 50) {
         	buf += "0";
         }
         else {
