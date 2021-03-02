@@ -1,3 +1,4 @@
+# This Wiki is horrible! Don't use it!
 # MorseBin
 This library for the Arduino IDE provides an easy-to-use communications protocol which only uses 1 digital pin of your microcontroller!
 # Electrical Informations
