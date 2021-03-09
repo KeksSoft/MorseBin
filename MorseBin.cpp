@@ -40,7 +40,7 @@ String MBReceive(int respin){
         }
         else {
           	buf += "1";
-          }        
+          }   
     }
     	return buf;
   }
